@@ -1,3 +1,4 @@
+// Menus click events
 document.getElementById("li1").addEventListener('click', function() {
     ShowIt("last");
     HideIt("top");

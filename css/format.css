@@ -18,3 +18,9 @@ section {
     display: none;
     justify-content: center;
 }
+
+#last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
