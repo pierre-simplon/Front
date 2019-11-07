@@ -23,7 +23,7 @@ function addLastMesure (id,mesure) {
     // define a text content
     var newTemperatureContent = document.createTextNode("Temperature: "+mesure.temperature+"°C");
     var newPressureContent=document.createTextNode("Pression: "+mesure.pressure+" Hpa");
-    var newHumidityContent=document.createTextNode("Humidité: "+mesure.humidity+" %hum");
+    var newHumidityContent=document.createTextNode("Humiditée: "+mesure.humidity+" %hum");
     // add content to the paragraph
     newPTemperature.appendChild(newTemperatureContent);
     newPPressure.appendChild(newHumidityContent);
