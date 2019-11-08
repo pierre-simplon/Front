@@ -7,8 +7,11 @@ document.getElementById("li1").addEventListener('click', function() {
 });
 document.getElementById("li2").addEventListener('click', function() {
     ShowIt("top");
+    ShowIt("top1");
+    ShowIt("top2");
+    ShowIt("top3");
     HideIt("last");
-    HideIt("last");
+    HideIt("table");
     HideIt("graph");
 });
 document.getElementById("li3").addEventListener('click', function() {

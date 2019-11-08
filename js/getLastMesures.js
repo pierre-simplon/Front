@@ -16,21 +16,31 @@ request.onload = function () {
 request.send();
 
 function addLastMesure (id,mesure) {
+    // create a new title per type of measure
+    var newH1DerniereMesure = document.createElement("h1");
+
     // create a new paragraph per type of measure
     var newPTemperature = document.createElement("p");
     var newPPressure=document.createElement("p");
     var newPHumidity=document.createElement("p");
+
     // define a text content
     var newTemperatureContent = document.createTextNode("Temperature: "+mesure.temperature+"°C");
     var newPressureContent=document.createTextNode("Pression: "+mesure.pressure+" Hpa");
     var newHumidityContent=document.createTextNode("Humiditée: "+mesure.humidity+" %hum");
+    var newH1DerniereMesureContent=document.createTextNode("Dernière Mesure: "+mesure.measureDate.substr(0,10));
+    
     // add content to the paragraph
     newPTemperature.appendChild(newTemperatureContent);
     newPPressure.appendChild(newHumidityContent);
     newPHumidity.appendChild(newPressureContent);
+    newH1DerniereMesure.appendChild(newH1DerniereMesureContent);
     
-    // add the paragraphs to the DOM
+    // add title & paragraphs to the DOM
+    document.getElementById(id).appendChild(newH1DerniereMesure);
     document.getElementById(id).appendChild(newPTemperature);
     document.getElementById(id).appendChild(newPPressure);
     document.getElementById(id).appendChild(newPHumidity);
   }
+
+  

@@ -1,5 +1,6 @@
 h1 {
     font-family: Abel,sans-serif;
+    font-size: 2em;
 }
 
 header,nav {
@@ -19,13 +20,29 @@ section {
     justify-content: center;
 }
 
-#last {
-    display: flex;
+#last,#top1,#top2,#top3 {
+    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+#top {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 p {
     padding: 0px;
     margin: 0px;
+}
+
+#table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table,th,td {
+    border: solid black 2px;
 }
