@@ -43,6 +43,18 @@ p {
     align-items: center;
 }
 
-table,th,td {
+table,td {
+    font-family: Abel,sans-serif;
+    font-size: 18px;
     border: solid black 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
+th {
+    font-family: Abel,sans-serif;
+    font-size: 18px;
+    border: solid black 2px;
+    margin: 0px;
+    padding: 0px;
 }

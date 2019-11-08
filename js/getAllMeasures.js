@@ -6,9 +6,15 @@ requestAll.open('GET',`https://distorted-louse-3971.dataplicity.io/measure/date?
 requestAll.onload = function () {
     if (requestAll.status >= 200 && requestAll.status < 400) {
         const jsonResultAll = JSON.parse(this.response)
-        for (jsonResultAll.id in jsonResultAll)
-            console.log(jsonResultAll.id.temperature)
-
+        for (index in jsonResultAll){
+            var measure = {
+                "date": jsonResultAll[index].measureDate,
+                "temperature" : jsonResultAll[index].temperature,
+                "humidite" : jsonResultAll[index].humidity,
+                "pression" : jsonResultAll[index].pressure    
+            };
+            addMeasures(measure);
+        }
     } else {
         console.log('Erreur ...')
     }
